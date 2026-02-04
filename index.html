@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latent - The Camera That Waits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="logo">Latent</h1>
+            <p class="tagline">撮る。待つ。出会う。</p>
+            <p class="sub-tagline">スマホの中にある、不便なフィルムカメラ。</p>
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <img src="images/hero-visual.jpg" alt="Vintage Camera Atmosphere">
+            <div class="vignette"></div>
+        </div>
+    </header>
+
+    <section class="concept">
+        <div class="container">
+            <h2 class="section-title">Concept</h2>
+            <div class="concept-text">
+                <p>スマホで撮れば、その場で見れる。</p>
+                <p>気に入らなければ、すぐに消せる。</p>
+                <p>現代のカメラアプリは、便利になりすぎました。</p>
+                <br>
+                <p>Latentは、あえてその便利さを手放します。</p>
+                <p>プレビュー画面はありません。</p>
+                <p>スマホの中に装填された、バーチャルなフィルム。</p>
+                <p>すべて撮り切るまで、写真を見ることはできないのです。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <div class="feature-number">01</div>
+                <h3>No Preview</h3>
+                <p>画面に映るのは小さなファインダーだけ。<br>スマホ撮影の「当たり前」を捨てて、被写体に向き合う。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">02</div>
+                <h3>Development Time</h3>
+                <p>フィルムを撮り切ったら現像ボタンを。<br>通知が来るまでの6時間、ワクワクして待つ体験を。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">03</div>
+                <h3>Limited Exposures</h3>
+                <p>1本のフィルムは24枚か36枚。<br>制限があるからこそ、1枚の価値が変わります。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Coming Soon</h2>
+            <p>リリース時にお知らせします。</p>
+
+            <form action="https://buttondown.com/api/emails/embed-subscribe/latent" method="post"
+                class="subscribe-form">
+                <input type="email" name="email" placeholder="メールアドレス" required />
+                <button type="submit">登録する</button>
+            </form>
+
+            <footer class="footer">
+                <p>&copy; 2026 Latent Project</p>
+            </footer>
+        </div>
+    </section>
+
+    <script>
+        // Simple scroll animation script
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.concept-text p, .feature-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
