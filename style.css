@@ -179,13 +179,12 @@ h1, h2, h3 {
 }
 
 .feature-image {
-    flex: 1;
+    flex-shrink: 0;
     position: relative;
 }
 
 .feature-image img {
-    width: 100%;
-    max-width: 320px;
+    width: 280px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
@@ -345,7 +344,8 @@ h1, h2, h3 {
     }
 
     .feature-image img {
-        max-width: 280px;
+        width: 240px;
+        max-width: 100%;
     }
 
     .feature-image::before {
